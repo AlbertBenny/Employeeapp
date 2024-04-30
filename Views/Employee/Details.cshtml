@@ -1,0 +1,35 @@
+﻿@model Employee.Models.employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>employee</h4>
+    <hr />
+    
+</div>
+<table border="1">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <td>@Html.DisplayFor(model => model.Name)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Age)</th>
+        <td>@Html.DisplayFor(model => model.Age)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Phone)</th>
+        <td> @Html.DisplayFor(model => model.Phone)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Discription)</th>
+        <td>@Html.DisplayFor(model => model.Discription)</td>
+    </tr>
+</table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
